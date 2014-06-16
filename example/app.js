@@ -2,15 +2,16 @@
 
 // If the user does not have a module system, how are
 // we doing this?
-var configuration = require('torii/configuration').default;
+var configuration = require('torii/configuration')['default'];
 
 configuration.endpoints['linked-in-oauth2'] = {
-  apiKey: '772yus6d70pf11'
+  apiKey: '772yus6d70pf11',
+  redirectUri: 'http://localhost:8000/example/'
 };
 
 configuration.endpoints['google-oauth2'] = {
-  redirectUri: 'http://localhost:8000/example/',
-  apiKey:      '139338504777-vqu8ikemg935k1kivsku7fv3cfgq9452.apps.googleusercontent.com'
+  apiKey:      '139338504777-vqu8ikemg935k1kivsku7fv3cfgq9452.apps.googleusercontent.com',
+  redirectUri: 'http://localhost:8000/example/'
 };
 
 configuration.endpoints['facebook-connect'] = {
@@ -19,7 +20,7 @@ configuration.endpoints['facebook-connect'] = {
 
 configuration.endpoints['facebook-oauth2'] = {
   apiKey:      '744221908941738',
-  redirectUri: 'http://localhost.dev:8000/example/'
+  redirectUri: 'http://localhost:8000/example/'
 };
 
 require("torii/ember");
@@ -32,6 +33,7 @@ App.ApplicationRoute = Ember.Route.extend({
       var controller = this.controller;
       controller.set('error', null);
       controller.set('authData', null);
+
       this.get('torii').open(endpoint).then(function(authData){
         controller.set('authData', authData);
       }, function(error){

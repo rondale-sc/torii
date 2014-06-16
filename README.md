@@ -300,8 +300,8 @@ it in your configuration. To do so, specify a `sessionServiceName` in your torii
 ```
 window.ENV = window.ENV || {};
 window.ENV['torii'] = {
-  sessionServiceName: 'session', // a 'session' property will be injected on routes and controllers 
-  
+  sessionServiceName: 'session', // a 'session' property will be injected on routes and controllers
+
   // ... additional configuration for endpoints, etc
 };
 ```
