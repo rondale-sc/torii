@@ -6,25 +6,27 @@
   "directories": {
     "lib": "lib"
   },
+  "ember-addon-main": "lib/ember-cli-main.js",
   "devDependencies": {
+    "connect-redirection": "0.0.1",
     "grunt": "~0.4.2",
     "grunt-browserify": "~1.2.12",
     "grunt-cli": "~0.1.11",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-testem": "~0.5.14",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-yuidoc": "~0.5.0",
     "grunt-es6-module-transpiler": "~0.6.0",
+    "grunt-release-it": "0.0.3",
     "grunt-s3": "~0.2.0-alpha.2",
     "jshint": "~2.4.2",
     "load-grunt-config": "~0.5.0",
-    "load-grunt-tasks": "~0.2.0",
-    "connect-redirection": "0.0.1",
-    "grunt-contrib-testem": "~0.5.14",
-    "grunt-contrib-yuidoc": "~0.5.0",
-    "grunt-release-it": "0.0.3"
+    "load-grunt-tasks": "~0.2.0"
   },
   "scripts": {
     "test": "grunt test",
@@ -41,7 +43,8 @@
   },
   "keywords": [
     "authentication",
-    "ember.js"
+    "ember.js",
+    "ember-addon"
   ],
   "author": "Cory Forsyth and Matthew Beale",
   "license": "MIT"
